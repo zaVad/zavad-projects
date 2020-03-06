@@ -36,7 +36,7 @@ $dan-color:rgb(134, 109, 103);
 }
 
 body{
-   background-color: rgb(20, 20, 20);
+    background-color: rgb(20, 20, 20);
    font-family: 'Leckerli One';
    overflow: hidden;
     
@@ -199,10 +199,14 @@ nav{
    
     .title{
         h1{
+            opacity: 0;
+            animation: h1Title .5s 1.6s ease-in-out forwards ;
             @include bigD;
             font-size: 6vh;
         }
         p{
+            opacity: 0;
+            animation: subText  .5s 2.3s ease-in-out forwards;
             margin-top: 1rem;
             font-size: 17px;
             font-family: 'roboto',sans-serif;
@@ -255,6 +259,8 @@ nav{
         grid-column: 1/1;
     }
     .bottom-icon{
+        opacity: 0;
+        animation: downie .3s 3.1s ease-in-out forwards;
         color: rgba(77, 74, 74, 0.781);
         font-size: 4vh;
         display: flex;
@@ -359,8 +365,94 @@ aside{
     }
 }
 .ico{
+    opacity: 0;
+    animation: uppi 0.2s 2.9s ease-in-out forwards;
     color:rgba(77, 74, 74, 0.781);
 }
+@keyframes h1Title{
+    0%{
+        opacity: 0;
+        transform: translatex(-550px) scale(0);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translatex(0) scale(1);
+    }
+}
+@keyframes subText{
+    0%{
+        opacity: 0;
+        transform: translatex(250px) translateY(100px) scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translatex(0) translateY(0) scale(1);
+    }
+}
+@keyframes uppi{
+    0%{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+@keyframes downie{
+    0%{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+//section skills//
+
+.skills-container{
+    .show-off{
+        border: 2px solid green;
+        width:100vw;
+        height: 100vh;
+    }
+    margin-left: 5rem;
+    width: 90%;
+    height: 100vh;
+    border: 2px solid red;
+    display: flex;
+    .main-area{
+        width: 49vw;
+        height: 100vh;
+        padding: 2rem 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        h1{
+            font-size: 2.8vw;
+            color: $color;
+            
+        }
+        p{
+            font-size: .9vw;
+            color: white;
+            font-family:'roboto',sans-serif;
+            font-weight: 200;
+            letter-spacing: 1px;
+            
+            margin-top: 1.7rem;
+
+
+        }
+
+    }
+}
+
 
 
 

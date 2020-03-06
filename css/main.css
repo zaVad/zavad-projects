@@ -265,12 +265,18 @@ nav .social-icons .nav-link:hover {
 }
 
 .container .title h1 {
+  opacity: 0;
+  -webkit-animation: h1Title .5s 1.6s ease-in-out forwards;
+          animation: h1Title .5s 1.6s ease-in-out forwards;
   color: #243d2f;
   text-shadow: 1px 1px 1px #bbcfc0, 1px 2px 1px #866d67, 1px 3px 1px #866d67, 1px 4px 1px #866d67, 1px 5px 1px #866d67, 1px 6px 1px #866d67, 1px 7px 1px #866d67, 1px 8px 1px #866d67, 1px 9px 1px #866d67, 1px 10px 1px #866d67;
   font-size: 6vh;
 }
 
 .container .title p {
+  opacity: 0;
+  -webkit-animation: subText  .5s 2.3s ease-in-out forwards;
+          animation: subText  .5s 2.3s ease-in-out forwards;
   margin-top: 1rem;
   font-size: 17px;
   font-family: 'roboto',sans-serif;
@@ -342,6 +348,9 @@ nav .social-icons .nav-link:hover {
 }
 
 .container .bottom-icon {
+  opacity: 0;
+  -webkit-animation: downie .3s 3.1s ease-in-out forwards;
+          animation: downie .3s 3.1s ease-in-out forwards;
   color: rgba(77, 74, 74, 0.781);
   font-size: 4vh;
   display: -webkit-box;
@@ -498,6 +507,162 @@ aside .ghost {
 }
 
 .ico {
+  opacity: 0;
+  -webkit-animation: uppi 0.2s 2.9s ease-in-out forwards;
+          animation: uppi 0.2s 2.9s ease-in-out forwards;
   color: rgba(77, 74, 74, 0.781);
+}
+
+@-webkit-keyframes h1Title {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatex(-550px) scale(0);
+            transform: translatex(-550px) scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translatex(0) scale(1);
+            transform: translatex(0) scale(1);
+  }
+}
+
+@keyframes h1Title {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatex(-550px) scale(0);
+            transform: translatex(-550px) scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translatex(0) scale(1);
+            transform: translatex(0) scale(1);
+  }
+}
+
+@-webkit-keyframes subText {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatex(250px) translateY(100px) scale(0);
+            transform: translatex(250px) translateY(100px) scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translatex(0) translateY(0) scale(1);
+            transform: translatex(0) translateY(0) scale(1);
+  }
+}
+
+@keyframes subText {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatex(250px) translateY(100px) scale(0);
+            transform: translatex(250px) translateY(100px) scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translatex(0) translateY(0) scale(1);
+            transform: translatex(0) translateY(0) scale(1);
+  }
+}
+
+@-webkit-keyframes uppi {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes uppi {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes downie {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes downie {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.skills-container {
+  margin-left: 5rem;
+  width: 90%;
+  height: 100vh;
+  border: 2px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skills-container .show-off {
+  border: 2px solid green;
+  width: 100vw;
+  height: 100vh;
+}
+
+.skills-container .main-area {
+  width: 49vw;
+  height: 100vh;
+  padding: 2rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.skills-container .main-area h1 {
+  font-size: 2.8vw;
+  color: #10ac84;
+}
+
+.skills-container .main-area p {
+  font-size: .9vw;
+  color: white;
+  font-family: 'roboto',sans-serif;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
 }
 /*# sourceMappingURL=main.css.map */
