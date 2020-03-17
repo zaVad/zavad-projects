@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>daniels portfolio</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6ba40cac13.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Leckerli+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="en">
+    <div class="load-container">
+        <h1>D</h1>
+        <h6>Daniel</h6>
+        <h4>Daniel is thinking...</h4>
+        <div class="loading">
+            <div class="obj"></div>
+            <div class="obj"></div>
+            <div class="obj"></div>
+            <div class="obj"></div>
+            <div class="obj"></div>
+            <div class="obj"></div>
+            <div class="obj"></div>
+            <div class="obj"></div>
+            <div class="obj"></div>
+        </div>
+    </div>
+    
     <nav>
         <div class="dan">
             <h1 class="big-d">D</h1>
@@ -23,7 +39,7 @@
             <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user-secret" aria-hidden="true"></i></a><div class="text">About</div></li>
             <li class="nav-item"><a href="skills.html" class="nav-link"><i class="fas fa-cog" aria-hidden="true"></i></a><div class="text">Skills</div></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-tools" aria-hidden="true"></i></a><div class="text">Work</div></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link"><i class="far fa-envelope-open" aria-hidden="true"></i></a><div class="text">Contact</div></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link"><i class="far fa-envelope-open" aria-hidden="true"></i></a><div class="text">Contct</div></li>
         </ul>
     
         <div class="social-icons">
@@ -39,8 +55,8 @@
         <span class="older forth">you</span>
         <span class="older fifth">level</span>
         <span class="older sixth">up!</span>
-        <img src="/img/pacman.png" alt="" class="pac">
-        <img src="/img/ghost.png" alt="" class="ghost">
+        <img src="img/pacman.png" alt="" class="pac">
+        <img src="img/ghost.png" alt="" class="ghost">
     </aside>
     <main>
         <div class="skills-container">
@@ -53,20 +69,32 @@
             <div class="show-off">
                 <div class="wrap">
                     <div class="cube">
-                        <div class="content"><span>css</span><span>scss</span></div>
-                        <div class="content"><span>java script</span><span>bem</span></div>
-                        <div class="content"><span>github</span><span>bootstrap</span></div>
-                        <div class="content"><span>git</span><span>html5</span></div>
-                        <div class="content"><span>sass</span><span>cs3</span></div>
-                        <div class="content"><span>npm</span><span>gulp</span></div>
+                        <div class="content"><span class="content-color">css</span><span class="content-color">scss</span></div>
+                        <div class="content"><span class="content-color">java script</span><span class="content-color">bem</span></div>
+                        <div class="content"><span class="content-color">github</span><span class="content-color">bootstrap</span></div>
+                        <div class="content"><span class="content-color">git</span><span class="content-color">html5</span></div>
+                        <div class="content"><span class="content-color">sass</span><span class="content-color">css3</span></div>
+                        <div class="content"><span class="content-color">npm</span><span class="content-color">gulp</span></div>
                     </div>
                 </div>
+                <form action="">
+                    <select name="dropdown" id="skillcolor" onchange="colorChange(this)">
+                        <option value="reset">reset</option>
+                        <option value="random">random</option>
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                        <option value="yellow">yellow</option>
+                        <option value="purple">purple</option>
+                        <option value="blue">blue</option>
+                        <option value="orange">orange</option>
+                    </select>
+                </form>
 
             </div>
         </div>
 
     </main>
     
-    <script src="/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
