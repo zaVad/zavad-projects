@@ -1,6 +1,6 @@
 $icolor:rgba(40, 40, 44, 0.767);
 $color:#37d4a0;
-$dan-color:rgb(134, 109, 103);
+$dan-color:rgb(21, 79, 156);
 @mixin overthx{
     transition: .3s linear;
         opacity: 0;
@@ -26,8 +26,8 @@ $dan-color:rgb(134, 109, 103);
     z-index: -1;
 }
 @mixin bigD {
-        color: $color;
-        text-shadow: 1px 1px 1px rgb(187, 207, 192),    
+        color: rgb(102, 0, 8);
+        text-shadow: 2px 2px 2px rgb(255, 251, 6),    
         1px 2px 1px $dan-color,
         1px 3px 1px $dan-color,
         1px 4px 1px $dan-color,
@@ -42,6 +42,7 @@ $dan-color:rgb(134, 109, 103);
 //loader//
     
 .load-container{
+    
     animation: movingPage .5s linear forwards;
     display: flex;
     flex-direction: column;
@@ -53,9 +54,10 @@ $dan-color:rgb(134, 109, 103);
     background-color:rgb(21, 22, 22) ;
     h1{
         @include bigD();
-        font-family: 'Leckerli One';
-        font-size: 3.2vw;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 3.7rem;
         animation: movingElements .4s 2.3s  ease-in forwards;
+        margin-bottom: .6rem;
         
         
 
@@ -173,14 +175,15 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     h6{
-        font-size: 1.6vh;
-        margin-top: .3rem;
+        font-size: .8rem;
+        margin-top: .5rem;
         letter-spacing: 1px;
     }
     .big-d{
-        font-family: 'Leckerli One';
-        font-size: 8vh;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 3.5rem;
         @include bigD;
     }
 }
@@ -418,9 +421,10 @@ nav{
         grid-row: 2/span 1;
         grid-column: 2/span 2;
        .big-d{
-            font-family: 'Leckerli One';
+            font-family: 'Press Start 2P', cursive;
            animation: bigD 1s 3.355s ease-in backwards;
            @include bigD;
+           font-size: 27rem;
        }
     }
     span{
@@ -771,7 +775,7 @@ aside{
     form{
         h1{
             .contact-me{
-                animation:showingText 2.8s 4.6s linear both;
+                animation:showingText 1s 3.6s linear backwards;
                 &:nth-child(1){
                     animation-delay: 2.8s;
                 }
@@ -810,6 +814,15 @@ aside{
             background-color:$icolor ;
             
         }
+        .namee{
+            animation: names .7s 2.8s linear backwards;
+
+
+        }
+        .emaill{
+            animation: email .7s 2.8s linear backwards;
+
+        }
 
         input,textarea{
 
@@ -841,9 +854,11 @@ aside{
         .text{
             
             grid-column: 1/ span 2;
+            animation:  message 1s 2.8s linear backwards;
         }
         .subject{
             grid-column: 1/span 2;
+            animation: subject .7s 2.8s linear backwards;
         }
         .send{
             position: relative;
@@ -910,6 +925,77 @@ aside{
         }
         
     } 
+}
+@keyframes names{
+    0%{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes email{
+    0%{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes subject{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes message{
+    0%{
+        opacity: 0;
+        transform: translateY(70px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+//work page//
+
+.work-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 81px;
+    border: 2px solid red;
+    height: 100vh;
+    width: 90vw;
+    
+
+    .container-projects{
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        height: 92vh;
+        width: 86vw;
+        grid-template-columns: repeat( auto-fit,minmax(400px,1fr));
+        grid-gap: 27px;
+        grid-auto-flow: row;
+        grid-auto-rows:410px;
+        border: 1px solid yellow;
+        .work-project{
+            border: 1px solid green;
+            
+            
+            
+        }
+    }
 }
 
 
