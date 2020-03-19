@@ -197,7 +197,7 @@ body {
 }
 
 .dan {
-  margin-top: 1.1vh;
+  margin-top: 1.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,6 +208,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .dan h6 {
@@ -1415,7 +1418,6 @@ aside .ghost {
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: 81px;
-  border: 2px solid red;
   height: 100vh;
   width: 90vw;
 }
@@ -1429,16 +1431,97 @@ aside .ghost {
   -ms-flex-line-pack: center;
       align-content: center;
   height: 92vh;
-  width: 86vw;
-  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-gap: 27px;
-  grid-auto-flow: row;
-  grid-auto-rows: 410px;
-  border: 1px solid yellow;
+  width: 87vw;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  grid-gap: .6rem;
 }
 
-.work-container .container-projects .work-project {
-  border: 1px solid green;
+.work-container .container-projects figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  position: relative;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  background: rgba(32, 26, 63, 0.603);
+}
+
+.work-container .container-projects figure:hover {
+  background: transparent;
+}
+
+.work-container .container-projects figure:hover img {
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+          transform: translate3d(0, 0, 0) scale(1);
+}
+
+.work-container .container-projects figure:hover a {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.work-container .container-projects figure img {
+  width: calc(100% + 10px);
+  opacity: .7;
+  -webkit-transform: translate3d(0, -20px, 0) scale(1.17);
+          transform: translate3d(0, -20px, 0) scale(1.17);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  height: 100%;
+}
+
+.work-container .container-projects figure figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.work-container .container-projects figure figcaption a {
+  padding: .2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: .4rem;
+  color: #111111;
+  text-decoration: none;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  background: #37d4a0;
+  text-align: center;
+  font-weight: 700;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  border: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform .3s linear;
+  transition: -webkit-transform .3s linear;
+  transition: transform .3s linear;
+  transition: transform .3s linear, -webkit-transform .3s linear;
 }
 /*# sourceMappingURL=main.css.map */

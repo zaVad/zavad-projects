@@ -1,9 +1,12 @@
 let loadContainer =document.querySelector('.load-container');
 window.addEventListener('load',loader);
 function loader(e){
+    
     setInterval(() => {
         loadContainer.style.display='none'
     },2750);
+    
+    
 };
 
 
@@ -227,78 +230,6 @@ function removeColors(){
 
     });
 };
-
-
- 
- 
- 
- 
-
-
-
-
-
-    
-
-
-
-
-
-
-   
-   
-
-    
-
-
-
-   
-
-    
-       
-    
-    
-
-    
-
-    
-    
-    
-
-   
-        
-
-        
-        
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -171,10 +171,11 @@ body{
 }
 .dan{
     
-    margin-top: 1.1vh;
+    margin-top: 1.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     
     h6{
         font-size: .8rem;
@@ -973,7 +974,6 @@ aside{
     align-items: center;
     justify-content: center;
     margin-left: 81px;
-    border: 2px solid red;
     height: 100vh;
     width: 90vw;
     
@@ -983,18 +983,77 @@ aside{
         justify-content: center;
         align-content: center;
         height: 92vh;
-        width: 86vw;
-        grid-template-columns: repeat( auto-fit,minmax(400px,1fr));
-        grid-gap: 27px;
-        grid-auto-flow: row;
-        grid-auto-rows:410px;
-        border: 1px solid yellow;
-        .work-project{
-            border: 1px solid green;
-            
-            
-            
+        width: 87vw;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        grid-auto-rows: 250px;
+        grid-gap: .6rem;
+        
+        figure{
+            &:hover{
+                background: transparent;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition:  .3s linear;
+            position: relative;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+            background: rgba(32, 26, 63, 0.603);
+            &:hover img{
+                transform:translate3d(0,0,0) scale(1) ;
+            }
+
+            &:hover a{
+                transform: scale(1);
+            }
+            img{
+                
+
+                width: calc(100% + 10px);
+                opacity: .7;
+                transform: translate3d(0,-20px,0) scale(1.17);
+                transition: all .5s;
+                height: 100%;
+                
+            }
+            figcaption{
+                
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a{
+                    padding: .2rem;
+                    display: flex;
+                    font-size: .4rem;
+                    color: rgb(17, 17, 17);
+                    text-decoration: none;
+                    border-radius: 50%;
+                    height: 4rem;
+                    width: 4rem;
+                    background: $color;
+                    text-align: center;
+                    font-weight: 700;
+                    align-items: center;
+                    outline: none;
+                    border: none;
+                    transform: scale(0);
+                    transition: transform .3s linear;
+                    
+                }
+            }
+                
         }
+            
+            
+            
+        
     }
 }
 
