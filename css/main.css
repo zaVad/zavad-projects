@@ -1,9 +1,7 @@
 .load-container {
   -webkit-animation: movingPage .5s linear forwards;
           animation: movingPage .5s linear forwards;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -966,6 +964,10 @@ aside .ghost {
 }
 
 .skills-container .show-off .wrap .cube .content:nth-child(2) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transform: rotateY(90deg) translateZ(200px);
           transform: rotateY(90deg) translateZ(200px);
 }
@@ -980,6 +982,10 @@ aside .ghost {
 }
 
 .skills-container .show-off .wrap .cube .content:nth-child(4) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transform: rotateY(-90deg) translateZ(200px);
           transform: rotateY(-90deg) translateZ(200px);
 }
@@ -994,6 +1000,10 @@ aside .ghost {
 }
 
 .skills-container .show-off .wrap .cube .content:nth-child(6) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transform: rotateX(-90deg) translateZ(200px);
           transform: rotateX(-90deg) translateZ(200px);
 }
@@ -1020,7 +1030,19 @@ aside .ghost {
 .skills-container .main-area h1 {
   font-size: 4rem;
   color: #37d4a0;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+}
+
+.skills-container .main-area h1 span {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.skills-container .main-area h1 span:hover {
+  display: inline-block;
+  -webkit-animation: rb .7s;
+          animation: rb .7s;
+  color: #660008;
 }
 
 .skills-container .main-area p {
@@ -1029,6 +1051,60 @@ aside .ghost {
   font-weight: 200;
   letter-spacing: 3px;
   margin-top: 1.7rem;
+}
+
+@-webkit-keyframes rb {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  35% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  45% {
+    -webkit-transform: scale3d(0.75, 1, 1);
+            transform: scale3d(0.75, 1, 1);
+  }
+  60% {
+    -webkit-transform: scale3d(1.2, 0.8, 1);
+            transform: scale3d(1.2, 0.8, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes rb {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  35% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  45% {
+    -webkit-transform: scale3d(0.75, 1, 1);
+            transform: scale3d(0.75, 1, 1);
+  }
+  60% {
+    -webkit-transform: scale3d(1.2, 0.8, 1);
+            transform: scale3d(1.2, 0.8, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
 }
 
 @-webkit-keyframes pageOpen {
@@ -1280,6 +1356,7 @@ aside .ghost {
   opacity: 0;
   -webkit-transition: opacity .3s linear;
   transition: opacity .3s linear;
+  pointer-events: none;
 }
 
 .containertwo .invader.open {
@@ -1439,6 +1516,8 @@ aside .ghost {
 }
 
 .work-container .container-projects figure {
+  -webkit-animation: workframes .5s 2.87s linear both;
+          animation: workframes .5s 2.87s linear both;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1523,5 +1602,27 @@ aside .ghost {
   transition: -webkit-transform .3s linear;
   transition: transform .3s linear;
   transition: transform .3s linear, -webkit-transform .3s linear;
+}
+
+@-webkit-keyframes workframes {
+  0% {
+    -webkit-transform: translate3d(-170px, 100px, 0) scale(0);
+            transform: translate3d(-170px, 100px, 0) scale(0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes workframes {
+  0% {
+    -webkit-transform: translate3d(-170px, 100px, 0) scale(0);
+            transform: translate3d(-170px, 100px, 0) scale(0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
+  }
 }
 /*# sourceMappingURL=main.css.map */

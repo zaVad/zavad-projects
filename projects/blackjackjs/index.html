@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+
+    <title>Blackjack</title>
+</head>
+<body>
+    <div class="container">
+        <header><h1>BLACKJACK</h1></header>
+        <h3><span id="blackjack-result">Let's play !</span></h3>
+    
+        <div class="blackjack-table">
+            <div id="your-box">
+                <h2>YOU <span id="your-blackjack-result">0</span></h2>
+                </div>
+            <div id="dealer-box">
+                <h2>DEALER <span id="dealer-blackjack-result">0</span></h2>
+            </div>
+               
+        </div>
+        <div class="blackjack-buttons">
+            <div class="buttons">
+                <button class="btn btn-hit" id="blackjack-hit-button">Hit</button>
+                <button class="btn btn-stand" id="blackjack-stand-button">Stand</button>
+                <button class="btn btn-deal" id="blackjack-deal-button">Deal</button>
+            </div>
+        </div>
+        <div class="blackjack-scores">
+            <h4>WIN <span id="wins"> 0 </span></h4>
+            <h4>LOSE <span id="losses"> 0 </span></h4>
+            <h4>DRAW <span id="draws"> 0 </span></h4>
+        </div>
+    </div>
+
+   <script type="text/javascript" src="./js/blackjack.js"></script> 
+</body>
+</html>

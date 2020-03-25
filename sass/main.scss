@@ -39,12 +39,17 @@ $dan-color:rgb(21, 79, 156);
         1px 10px 1px $dan-color,
     
 }
+
+//rubberBand for all//   
+
+
+
 //loader//
     
 .load-container{
     
     animation: movingPage .5s linear forwards;
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
@@ -190,6 +195,7 @@ body{
 }
 
 nav{
+    
     background: rgb(10, 10, 10);
     display: flex;
     flex-direction: column;
@@ -596,6 +602,7 @@ aside{
     .show-off{
         
         form{
+
             align-self: flex-end;
             transform: translateY(70px) translateX(-70px);
             
@@ -611,20 +618,21 @@ aside{
                 font-size: 15px;
                 font-family: 'Orbitron', sans-serif;
                 letter-spacing: 1px;
-                
             }
-            
-            
         }
+
         justify-content: center;
         align-items: center;
         width:100vw;
         height: 100vh;
         display: flex;
         flex-direction: column;
+
         .wrap{
+
             perspective: 800px;
             perspective-origin: 50% 50%;
+
                 .cube{
                 animation: loop 10s linear infinite;
                 position: relative;
@@ -637,6 +645,7 @@ aside{
                     .content{
                         
                         .first{
+                             
                                 color: rgb(102, 0, 8); 
                         }
                         .second{
@@ -679,20 +688,23 @@ aside{
                           transform: rotateY(0deg) translateZ(200px);
                       }
                       &:nth-child(2){
+                            flex-direction: column;
                             transform: rotateY(90deg) translateZ(200px);  
                       }
                       &:nth-child(3){
-                          flex-direction: column;
+                            flex-direction: column; 
                             transform: rotateY(180deg) translateZ(200px);
                       }
                       &:nth-child(4){
+                            flex-direction: column;
                             transform: rotateY(-90deg) translateZ(200px);
                       }
                       &:nth-child(5){
-                          flex-direction: column;
+                            flex-direction: column;
                           transform: rotateX(90deg) translateZ(200px);
                       }
                       &:nth-child(6){
+                            flex-direction: column;
                           transform: rotateX(-90deg) translateZ(200px);
                       }
                     }
@@ -717,7 +729,18 @@ aside{
         h1{
             font-size: 4rem;
             color: $color;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            span{
+                display: inline-block;
+                
+                cursor: pointer;
+                &:hover{
+                    display: inline-block;
+                    animation: rb .7s;
+                    color: rgb(102, 0, 8);
+                    
+                }
+            }
             
         }
         p{
@@ -732,6 +755,27 @@ aside{
 
     }
 }
+@keyframes rb{
+    0%{
+        transform: scale3d(1,1,1);
+    }
+    35%{
+        transform: scale3d(1.25,0.75,1); 
+    }
+    45%{
+        transform: scale3d(0.75,1,1);
+    }
+    60%{
+        transform: scale3d(1.2,0.8,1);
+    }
+    75%{
+        transform: scale3d(1.05,0.95,1);
+    }
+    100%{
+        transform: scale3d(1,1,1);
+    }
+}
+
 @keyframes pageOpen{
     0%{
         opacity: 0;
@@ -776,6 +820,8 @@ aside{
     form{
         h1{
             .contact-me{
+                
+                
                 animation:showingText 1s 3.6s linear backwards;
                 &:nth-child(1){
                     animation-delay: 2.8s;
@@ -907,13 +953,12 @@ aside{
 
     .invader{
          opacity: 0;
-       transition:opacity .3s linear;
+        transition:opacity .3s linear;
+        pointer-events: none;
         &.open{
             
            opacity: 1;
         }
-       
-
     }
     
     
@@ -989,6 +1034,8 @@ aside{
         grid-gap: .6rem;
         
         figure{
+            
+            animation: workframes .5s 2.87s linear both;
             &:hover{
                 background: transparent;
             }
@@ -1051,11 +1098,24 @@ aside{
                 
         }
             
-            
-            
-        
     }
 }
+@keyframes workframes{
+    0%{
+        transform: translate3d(-170px, 100px, 0) scale(0);
+    }
+    100%{
+        transform: translate3d(0,0,0) scale(1);
+    }
+}
+
+
+
+//about//
+
+
+    
+
 
 
 

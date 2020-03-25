@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Monoton', cursive;
+  background-color: #332e36;
+}
+
+h2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 100%;
+  color: black;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 5rem;
+}
+
+.container h1 {
+  padding: 2rem .3rem;
+  font-size: 70px;
+  color: #240d31;
+}
+
+.container .blackjack-table {
+  background-color: #021b15;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  height: 60vh;
+}
+
+.container .blackjack-table h2 {
+  text-align: center;
+}
+
+.container .blackjack-table #your-box {
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80%;
+  width: 40%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .blackjack-table img {
+  width: 20%;
+  height: 21%;
+  margin: 2%;
+}
+
+.container .blackjack-table #dealer-box {
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80%;
+  width: 40%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .blackjack-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.container .blackjack-buttons .buttons {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+}
+
+.container .blackjack-buttons .buttons .btn {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  height: 3rem;
+  width: 6rem;
+  border-radius: 7px;
+}
+
+.container .blackjack-buttons .buttons .btn-hit {
+  background-color: #3030ad;
+}
+
+.container .blackjack-buttons .buttons .btn-stand {
+  background-color: #e7e71b;
+}
+
+.container .blackjack-buttons .buttons .btn-deal {
+  background-color: #cc1919;
+}
+
+.container .blackjack-scores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .blackjack-scores h4 {
+  margin-right: 2.4rem;
+}
+
+span {
+  margin-left: .4rem;
+}
+/*# sourceMappingURL=style.css.map */
