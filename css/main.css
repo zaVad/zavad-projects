@@ -1,7 +1,9 @@
 .load-container {
   -webkit-animation: movingPage .5s linear forwards;
           animation: movingPage .5s linear forwards;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -458,6 +460,7 @@ nav .social-icons .nav-link:hover {
 }
 
 .container .title h1 {
+  display: inline-block;
   opacity: 0;
   -webkit-animation: h1Title .5s 4.355s ease-in-out forwards;
           animation: h1Title .5s 4.355s ease-in-out forwards;

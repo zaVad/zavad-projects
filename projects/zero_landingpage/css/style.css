@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .main-nav {
+  width: 100%;
+  height: 10rem;
+  padding: 0 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .main-nav .logo a {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: 2px solid #eee;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+header .main-nav .hamburger-menu {
+  padding: .9rem 0;
+  width: 5rem;
+  height: 5rem;
+  background-color: #eee;
+  border-radius: .4rem;
+  -webkit-box-shadow: .5rem .5rem 1rem #cacaca, -.5rem -.5rem 1rem #fff;
+          box-shadow: .5rem .5rem 1rem #cacaca, -.5rem -.5rem 1rem #fff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
+}
+
+header .main-nav .hamburger-menu:hover {
+  -webkit-box-shadow: inset .5rem .5rem 1rem #cacaca, inset -.5rem -.5rem 1rem #fff;
+          box-shadow: inset .5rem .5rem 1rem #cacaca, inset -.5rem -.5rem 1rem #fff;
+}
+
+header .main-nav .hamburger-menu .bar {
+  width: 3.2rem;
+  height: 2px;
+  background-color: #333;
+  -webkit-transition: all  .3s linear;
+  transition: all  .3s linear;
+}
+
+header .main-nav .hamburger-menu.open .bar:nth-child(1) {
+  -webkit-transform: rotate(135deg) translate(8px, -8px);
+          transform: rotate(135deg) translate(8px, -8px);
+}
+
+header .main-nav .hamburger-menu.open .bar:nth-child(2) {
+  background-color: transparent;
+}
+
+header .main-nav .hamburger-menu.open .bar:nth-child(3) {
+  -webkit-transform: rotate(-135deg) translate(8px, 8px);
+          transform: rotate(-135deg) translate(8px, 8px);
+}
+
+header .main-nav .nav-list {
+  -webkit-transform: translate(50rem);
+          transform: translate(50rem);
+  width: 50rem;
+  list-style: none;
+  height: 100vh;
+  background-color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+header .main-nav .nav-list .nav-item {
+  border-bottom: 2px solid crimson;
+}
+
+header .main-nav .nav-list .nav-item .nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 .5rem;
+  display: block;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+header .main-nav .nav-list .nav-item .nav-link:hover {
+  color: crimson;
+}
+
+header .main-nav .nav-list.open {
+  -webkit-transform: translatex(0);
+          transform: translatex(0);
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("/portfolio3/projects/zero_landingpage/img/zeroleftside.jpg") no-repeat center;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero .hero-clipped {
+  width: 60%;
+  height: inherit;
+  background-color: #eee;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.hero .hero-clipped .hero-textbox {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 1rem;
+  font-family: 'lato',sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.6;
+  z-index: 5;
+}
+
+.hero .hero-clipped .hero-textbox .main-heading {
+  font-size: 3.7rem;
+  font-weight: 900;
+  letter-spacing: .5rem;
+}
+
+.hero .hero-clipped .hero-textbox .sub-heading {
+  font-size: 1.6rem;
+  letter-spacing: .5rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+.hero .hero-clipped .hero-textbox .cta-btn {
+  display: inline-block;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background-color: crimson;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 4rem;
+  border-radius: .4rem;
+  position: relative;
+  -webkit-box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.3);
+}
+
+.hero .hero-clipped .hero-textbox .cta-btn:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.hero .hero-clipped .hero-textbox .cta-btn:hover::after {
+  -webkit-transform: scaleX(1.2) scaleY(1.6);
+          transform: scaleX(1.2) scaleY(1.6);
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media (max-width: 1400px) {
+  .hero .hero-clipped {
+    width: 100%;
+    height: 75vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+  }
+  header .main-nav .logo a {
+    color: #333;
+    outline-color: #333;
+  }
+}
+
+@media (max-width: 768px) {
+  header .main-nav .nav-list {
+    width: 20rem;
+  }
+  .hero .hero-clipped .hero-textbox .main-heading {
+    font-size: 2.5rem;
+  }
+  .hero .hero-clipped .hero-textbox .sub-heading {
+    font-size: 1.2rem;
+  }
+  .hero .hero-clipped .hero-textbox .cta-btn {
+    font-size: 1.1rem;
+    padding: 0.7rem 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero .hero-clipped .hero-textbox .main-heading {
+    font-size: 1.6rem;
+  }
+  .hero .hero-clipped .hero-textbox .sub-heading {
+    font-size: 0.8rem;
+  }
+  .hero .hero-clipped .hero-textbox .cta-btn {
+    font-size: 1.1rem;
+    padding: 0.7rem 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

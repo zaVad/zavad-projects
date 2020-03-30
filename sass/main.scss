@@ -49,7 +49,7 @@ $dan-color:rgb(21, 79, 156);
 .load-container{
     
     animation: movingPage .5s linear forwards;
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
@@ -355,6 +355,10 @@ nav{
    
     .title{
         h1{
+            display: inline-block;
+            
+           
+            
             opacity: 0;
             animation: h1Title .5s 4.355s ease-in-out forwards ;
             color: $color;
