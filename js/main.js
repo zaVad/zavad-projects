@@ -2,7 +2,7 @@ let loadContainer =document.querySelector('.load-container');
 window.addEventListener('load',loader);
 function loader(e){
     
-    setInterval(() => {
+    setTimeout(() => {
         loadContainer.style.display='none'
     },2750);
     
@@ -140,7 +140,7 @@ send.addEventListener('focus',(e)=>{
        
     };
     let interId;
-    let cubee=document.querySelector('.cube','.content').querySelectorAll('.content-color');
+    let cubee=document.querySelectorAll('.content-color');
    let randomNumber= Math.floor(Math.random()*6);
    const choices =['first','second','third','forth','fifth','sixth','content-color'];
    function randomFunction(){
@@ -230,6 +230,14 @@ function removeColors(){
 
     });
 };
+
+
+
+ 
+ 
+
+ 
+
 
 
 

@@ -1,4 +1,5 @@
 .load-container {
+  z-index: 1000;
   -webkit-animation: movingPage .5s linear forwards;
           animation: movingPage .5s linear forwards;
   display: -webkit-box;
@@ -1626,6 +1627,278 @@ aside .ghost {
   100% {
     -webkit-transform: translate3d(0, 0, 0) scale(1);
             transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.about-container {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-container .main-about {
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #151616;
+  border: 5px solid #666;
+  width: 87%;
+  height: 87vh;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-container .main-about .frame {
+  cursor: pointer;
+  position: absolute;
+  margin-left: 5rem;
+  left: 10px;
+  width: 850px;
+  height: 500px;
+  border-radius: 20px;
+  border: 5px solid #666;
+  z-index: 8;
+  background-color: rgba(10, 10, 10, 0.473);
+  overflow: hidden;
+}
+
+.about-container .main-about .frame:hover img {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+          transform: translate3d(0, 0, 0) scale(1);
+}
+
+.about-container .main-about .frame:hover ~ .photo {
+  -webkit-transform: translate3d(-50px, -140px, 0) scale(0.4);
+          transform: translate3d(-50px, -140px, 0) scale(0.4);
+}
+
+.about-container .main-about .frame:hover ~ .about-me {
+  opacity: 0;
+}
+
+.about-container .main-about .frame img {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  -webkit-transform: translate3d(-50px, -140px, 0) scale(0.4);
+          transform: translate3d(-50px, -140px, 0) scale(0.4);
+}
+
+.about-container .main-about .photo {
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+          transform: translate3d(0, 0, 0) scale(1);
+  border: 5px solid #666;
+  position: relative;
+  border-radius: 20px;
+  z-index: 9;
+  margin-left: 4rem;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.about-container .main-about .about-me {
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 11rem 10rem;
+}
+
+.about-container .main-about .about-me h1 {
+  position: relative;
+  color: #37d4a0;
+  font-size: 4rem;
+  padding: 1rem .5rem;
+  letter-spacing: 2px;
+  z-index: 9;
+}
+
+.about-container .main-about .about-me p {
+  position: relative;
+  display: block;
+  color: #37d4a0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  z-index: 9;
+  padding-right: 15rem;
+}
+
+.about-container .main-about .add {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .main-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-container .main-about .photo {
+    height: 370px;
+    width: 370px;
+  }
+  .about-container .main-about .about-me {
+    padding: 2rem 2rem;
+  }
+  .about-container .main-about .about-me h1 {
+    font-size: 2.4rem;
+  }
+  .about-container .main-about .about-me p {
+    font-size: 12px;
+  }
+  .about-container .main-about {
+    width: 68%;
+    height: 100vh;
+  }
+  .about-container .main-about .add {
+    width: 200px;
+    height: 110px;
+    position: absolute;
+  }
+  header .container span {
+    font-size: 3vw;
+  }
+  header .container .title .main-text {
+    font-size: 4vw;
+  }
+  header .container .title .main-p {
+    font-size: .7rem;
+  }
+  header .container .bottom-icon {
+    font-size: 3vw;
+    padding-left: 1.4vw;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    -ms-grid-column: 1;
+    grid-column: 1/1;
+    padding-bottom: 0vh;
+  }
+  header .container .title-d .big-d {
+    font-size: 30vw;
+  }
+  body {
+    overflow-y: hidden;
+  }
+  body nav {
+    height: 114vh;
+  }
+  body nav .nav-list {
+    height: 24rem;
+  }
+  body nav .social-icons {
+    height: 14rem;
+  }
+  body nav .social-icons .nav-link:nth-child(3) {
+    margin-bottom: 3vh;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    overflow-y: hidden;
+    height: 114vh;
+  }
+  body main .skills-container {
+    width: 100%;
+    height: 100vh;
+  }
+  body main .skills-container .main-area {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+  body main .skills-container .main-area h1 {
+    font-size: 7vw;
+  }
+  body main .skills-container .show-off {
+    display: none;
+  }
+  body main .skills-container .show-off form {
+    display: none;
+  }
+  body main .skills-container .show-off .wrap .cube {
+    display: none;
+  }
+  body nav {
+    height: 114vh;
+  }
+  body aside {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+  body .containertwo #superform {
+    width: 30rem;
+  }
+  body .containertwo form p {
+    -webkit-transform: translateY(0px) translateX(0px);
+            transform: translateY(0px) translateX(0px);
+  }
+  body .containertwo p {
+    -webkit-transform: translateY(30px) translateX(-250px);
+            transform: translateY(30px) translateX(-250px);
+  }
+  body .containertwo .invader {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  body .work-container {
+    width: 75%;
+  }
+  body nav {
+    height: 110vh;
+  }
+  body main .skills-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .skills-container .show-off form {
+    -webkit-transform: translateY(-600px) translateX(-300px);
+            transform: translateY(-600px) translateX(-300px);
+  }
+  body main .skills-container .show-off .wrap .cube {
+    margin-top: 9rem;
+    margin-right: 9rem;
+  }
+  body main .skills-container .main-area {
+    width: 60vw;
+  }
+  body main .skills-container .main-area p {
+    font-size: 2vw;
+    height: 30vw;
   }
 }
 /*# sourceMappingURL=main.css.map */
