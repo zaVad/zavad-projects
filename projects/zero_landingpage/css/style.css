@@ -156,7 +156,7 @@ header .main-nav .nav-list.open {
 .hero {
   width: 100%;
   height: 100vh;
-  background: url("/portfolio3/projects/zero_landingpage/img/zeroleftside.jpg") no-repeat center;
+  background: url("../img/zeroleftside.jpg") no-repeat center;
   background-size: 100% 100%;
   position: relative;
 }

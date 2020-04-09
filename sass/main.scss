@@ -171,7 +171,7 @@ $dan-color:rgb(21, 79, 156);
 body{
     background-color: rgb(15, 15, 15);
    font-family: 'orbitron',sans-serif;
-   overflow: hidden;
+   overflow-x: hidden;
    
     
 }
@@ -1200,8 +1200,8 @@ aside{
             p{
                 position: relative;
                 display: block;
-                color: $color;
-                font-size: 14px;
+                color: white;
+                font-size: 16px;
                 letter-spacing: 2px;
                 word-spacing: 3px;
                 z-index: 9;
@@ -1232,34 +1232,64 @@ aside{
 
 //medias queries//
 @media (max-width:768px){
-    .main-about{
+   .about-container{
+        margin-left: 2rem;
+        width: 83%;
+        height: 100vh;
+        border: none;
+
+       .main-about{
         display: flex;
         flex-direction: column;
-        
-    }
-    .about-container .main-about .photo{
-        height: 370px;
-        width: 370px;
-    }
-    .about-container .main-about .about-me{
-        padding: 2rem 2rem;
-        h1{
-            font-size: 2.4rem;
-            
-        }
-        p{
-            font-size: 12px;
-        }
-    }
-    .about-container .main-about{
-        width: 68%;
+        margin-top: 2rem;
+        overflow: hidden;
+        margin-left: 2rem;
+        width: 83%;
         height: 100vh;
-        .add{
-            width: 200px;
-            height: 110px;
-            position: absolute;
+        margin-right: 0;
+        border: none;
+        .about-me{
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            h1{
+                font-size: 2rem;
+                margin: 0;
+
+
+            }
+            p{
+                font-size: 14px;
+                margin: 0;
+                padding: 2rem 2rem;
+
+            }
         }
-    }
+           .add{
+               display: none;
+           }
+           .frame{
+               border: none;
+               display: none;
+
+           }
+           .photo{
+            
+                margin-right: 0;
+                margin-left: 0;
+                padding: 0;
+                margin-top: 3rem;
+                width: 370px;
+                height: 410px;
+            
+           }
+       }
+   }
 
     header{
         .container{
@@ -1321,7 +1351,70 @@ aside{
 }
 @media (max-width: 500px){
     body{
-        overflow-y: hidden;
+        overflow-y: visible;
+        
+        .about-container{
+            display: flex;
+            
+            margin-left: 2rem;
+            width: 81%;
+            height: 100vh;
+            
+            
+            
+            
+        }
+         .about-container .main-about{
+             display: flex;
+             flex-direction: column;
+             margin-top: 2rem;
+             overflow: hidden;
+             margin-left: 2rem;
+             width: 81%;
+             height: 100vh;
+             margin-right: 0;
+             .add{
+                 display: none;
+             }
+             .frame{
+                 
+                 
+                 display: none;
+                border:none;
+                 
+             }
+             border: none;
+            .photo{
+                margin-right: 0;
+                margin-left: 0;
+                margin-bottom: 0;
+                padding: 0;
+                margin-top: 4rem;
+                width: 220px;
+                height: 270px;
+            }
+            .about-me{
+                
+                
+                
+                height: max-content;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                
+                h1{
+                    font-size: 38px;
+                    margin: 0;
+                }
+                p{
+                    padding: 2rem 2rem;
+                    margin: 0;
+                    
+                    font-size: 10px;
+                }
+            }
+        }
         
         
         
@@ -1373,6 +1466,8 @@ aside{
 }
 @media (max-width:1024px){
     body{
+        overflow-x: hidden;
+        overflow-y: visible;
         .containertwo{
             #superform{
                 width: 30rem;
@@ -1401,7 +1496,7 @@ aside{
         
         
         
-            overflow: hidden;
+            
             nav{
                 height: 110vh;
             }

@@ -194,7 +194,7 @@
 body {
   background-color: #0f0f0f;
   font-family: 'orbitron',sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .dan {
@@ -1731,8 +1731,8 @@ aside .ghost {
 .about-container .main-about .about-me p {
   position: relative;
   display: block;
-  color: #37d4a0;
-  font-size: 14px;
+  color: white;
+  font-size: 16px;
   letter-spacing: 2px;
   word-spacing: 3px;
   z-index: 9;
@@ -1747,7 +1747,39 @@ aside .ghost {
 }
 
 @media (max-width: 768px) {
-  .main-about {
+  .about-container {
+    margin-left: 2rem;
+    width: 83%;
+    height: 100vh;
+    border: none;
+  }
+  .about-container .main-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 2rem;
+    overflow: hidden;
+    margin-left: 2rem;
+    width: 83%;
+    height: 100vh;
+    margin-right: 0;
+    border: none;
+  }
+  .about-container .main-about .about-me {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1756,27 +1788,29 @@ aside .ghost {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .about-container .main-about .photo {
-    height: 370px;
-    width: 370px;
-  }
-  .about-container .main-about .about-me {
-    padding: 2rem 2rem;
-  }
   .about-container .main-about .about-me h1 {
-    font-size: 2.4rem;
+    font-size: 2rem;
+    margin: 0;
   }
   .about-container .main-about .about-me p {
-    font-size: 12px;
-  }
-  .about-container .main-about {
-    width: 68%;
-    height: 100vh;
+    font-size: 14px;
+    margin: 0;
+    padding: 2rem 2rem;
   }
   .about-container .main-about .add {
-    width: 200px;
-    height: 110px;
-    position: absolute;
+    display: none;
+  }
+  .about-container .main-about .frame {
+    border: none;
+    display: none;
+  }
+  .about-container .main-about .photo {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+    margin-top: 3rem;
+    width: 370px;
+    height: 410px;
   }
   header .container span {
     font-size: 3vw;
@@ -1819,8 +1853,71 @@ aside .ghost {
 
 @media (max-width: 500px) {
   body {
-    overflow-y: hidden;
+    overflow-y: visible;
     height: 114vh;
+  }
+  body .about-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 2rem;
+    width: 81%;
+    height: 100vh;
+  }
+  body .about-container .main-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 2rem;
+    overflow: hidden;
+    margin-left: 2rem;
+    width: 81%;
+    height: 100vh;
+    margin-right: 0;
+    border: none;
+  }
+  body .about-container .main-about .add {
+    display: none;
+  }
+  body .about-container .main-about .frame {
+    display: none;
+    border: none;
+  }
+  body .about-container .main-about .photo {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
+    margin-top: 4rem;
+    width: 220px;
+    height: 270px;
+  }
+  body .about-container .main-about .about-me {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .about-container .main-about .about-me h1 {
+    font-size: 38px;
+    margin: 0;
+  }
+  body .about-container .main-about .about-me p {
+    padding: 2rem 2rem;
+    margin: 0;
+    font-size: 10px;
   }
   body main .skills-container {
     width: 100%;
@@ -1855,7 +1952,8 @@ aside .ghost {
 
 @media (max-width: 1024px) {
   body {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
   }
   body .containertwo #superform {
     width: 30rem;
