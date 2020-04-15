@@ -38,6 +38,24 @@ header{
                 color: #fff;
             }
         }
+        &.open{
+            .bar{
+                &:nth-child(1){
+                    transform: rotate(135deg) translate(8px, -8px);
+                    
+                }
+                &:nth-child(2){
+                    background-color: transparent;
+                    
+                }
+                &:nth-child(3){
+                    transform: rotate(-135deg) translate(8px, 8px);
+                    
+                }
+            }
+        }
+       
+        
         .hamburger-menu{
             padding: .9rem 0;
             width: 5rem;
@@ -63,22 +81,7 @@ header{
                 background-color: #333;
                 transition: all  .3s linear;
             }
-            &.open{
-                .bar{
-                    &:nth-child(1){
-                        transform: rotate(135deg) translate(8px, -8px);
-                        
-                    }
-                    &:nth-child(2){
-                        background-color: transparent;
-                        
-                    }
-                    &:nth-child(3){
-                        transform: rotate(-135deg) translate(8px, 8px);
-                        
-                    }
-                }
-            }
+            
         }
         .nav-list{
             transform: translate(50rem);

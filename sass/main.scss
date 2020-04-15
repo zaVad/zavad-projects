@@ -1351,8 +1351,6 @@ aside{
 }
 @media (max-width: 500px){
     body{
-        overflow-y: visible;
-        
         .about-container{
             display: flex;
             
@@ -1452,10 +1450,8 @@ aside{
             }
         }
         
-        height: 114vh;
-        nav{
-            height: 114vh;
-        }
+        
+        
         aside{
             display: none;
     

@@ -1852,10 +1852,6 @@ aside .ghost {
 }
 
 @media (max-width: 500px) {
-  body {
-    overflow-y: visible;
-    height: 114vh;
-  }
   body .about-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1941,9 +1937,6 @@ aside .ghost {
   }
   body main .skills-container .show-off .wrap .cube {
     display: none;
-  }
-  body nav {
-    height: 114vh;
   }
   body aside {
     display: none;

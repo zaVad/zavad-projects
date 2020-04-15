@@ -48,6 +48,20 @@ header .main-nav .logo a {
   color: #fff;
 }
 
+header .main-nav.open .bar:nth-child(1) {
+  -webkit-transform: rotate(135deg) translate(8px, -8px);
+          transform: rotate(135deg) translate(8px, -8px);
+}
+
+header .main-nav.open .bar:nth-child(2) {
+  background-color: transparent;
+}
+
+header .main-nav.open .bar:nth-child(3) {
+  -webkit-transform: rotate(-135deg) translate(8px, 8px);
+          transform: rotate(-135deg) translate(8px, 8px);
+}
+
 header .main-nav .hamburger-menu {
   padding: .9rem 0;
   width: 5rem;
@@ -83,20 +97,6 @@ header .main-nav .hamburger-menu .bar {
   background-color: #333;
   -webkit-transition: all  .3s linear;
   transition: all  .3s linear;
-}
-
-header .main-nav .hamburger-menu.open .bar:nth-child(1) {
-  -webkit-transform: rotate(135deg) translate(8px, -8px);
-          transform: rotate(135deg) translate(8px, -8px);
-}
-
-header .main-nav .hamburger-menu.open .bar:nth-child(2) {
-  background-color: transparent;
-}
-
-header .main-nav .hamburger-menu.open .bar:nth-child(3) {
-  -webkit-transform: rotate(-135deg) translate(8px, 8px);
-          transform: rotate(-135deg) translate(8px, 8px);
 }
 
 header .main-nav .nav-list {
